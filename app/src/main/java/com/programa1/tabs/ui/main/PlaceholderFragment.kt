@@ -9,16 +9,22 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.programa1.tabs.R
+
 /**
- * A placeholder fragment containing a simple view.
- * Esta clase contiene una View simple
+ * Un modelo de creación de Fragment que contiene un View sencillo
  */
+
 class PlaceholderFragment : Fragment() {
+
+    /**
+     * Variable para utilizar la clase PageViewModel
+     */
 
     private lateinit var pageViewModel: PageViewModel
 
     /**
      * Especifica el ViewModel llamando a la clase PageViewModel
+     * utilizando la función setIndex de la misma clase
      */
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,17 +52,14 @@ class PlaceholderFragment : Fragment() {
 
     companion object {
         /**
-         * The fragment argument representing the section number for this
-         * fragment.
+         *
          * El argumento del Fragment representa el número de sección para ese fragment
          */
         private const val ARG_SECTION_NUMBER = "section_number"
 
         /**
-         * Returns a new instance of this fragment for the given section
-         * number.
          *
-         * Devuelve una nueva instancia de ese fragmento para el número de sección especidicado
+         * Devuelve una nueva instancia de ese fragmento para el número de sección especificado
          */
         @JvmStatic
         fun newInstance(sectionNumber: Int): PlaceholderFragment {

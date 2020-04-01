@@ -8,9 +8,14 @@ import androidx.lifecycle.ViewModelProvider
 
 class PageViewModel : ViewModel() {
 
+    /**
+     * Aquí se describe el ViewModel utilizado a la hora de crear un Fragment
+     */
+
     private val _index = MutableLiveData<Int>()
+    // Este es el texto que aparecerá en el TextView de cada Tab
     val text: LiveData<String> = Transformations.map(_index) {
-        "Seccion: $it"
+        "Esta es la sección número $it"
     }
 
     fun setIndex(index: Int) {

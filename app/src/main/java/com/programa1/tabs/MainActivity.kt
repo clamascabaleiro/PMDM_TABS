@@ -12,6 +12,12 @@ import com.programa1.tabs.ui.main.SectionsPagerAdapter
 
 class MainActivity : AppCompatActivity() {
 
+    /**
+     * Esta es la clase principal, la cual contiene un AppBarLayout y un ViewPager
+     * El AppBarLayout contiene un TextView con el título
+     * y un TabLayout donde se introducirán los Tabs para cambiar de Fragment
+     */
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

@@ -15,17 +15,16 @@ private val TAB_TITLES = arrayOf(
 )
 
 /**
- * A [FragmentPagerAdapter] that returns a fragment corresponding to
- * one of the sections/tabs/pages.
  *
- * Devuelve un Fragment correspondiente a una de las secsiones
+ * Un [FragmentPagerAdapter] que
+ * devuelve un Fragment correspondiente a una de las Sections/Tabs/Pages
  */
 class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
     FragmentPagerAdapter(fm) {
 
     override fun getItem(position: Int): Fragment {
-        // getItem llama al fragmento  the fragment for the given page.
-        // Return a PlaceholderFragment (defined as a static inner class below).
+        // getItem es llamdo para instanciar un Fragment
+        // usando el método newInstance de PlaceholderFragment
         return PlaceholderFragment.newInstance(position + 1)
     }
 
@@ -34,7 +33,7 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
     }
 
     override fun getCount(): Int {
-        // Total de tabs que va mostrar (es este caso 3 porque son los que tenemos creados)
-        return 3
+        // Total de tabs que va mostrar (en este caso 3)
+        return 2
     }
 }
